@@ -758,3 +758,40 @@ main .table-data .order table tr td .status.pending {
 		display: none;
 	}
 }
+
+/* Sidebar Active State */
+#sidebar.active {
+    transform: translateX(-100%);
+}
+
+/* Notification Dropdown */
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 250px;
+    padding: 10px;
+}
+
+.notification-dropdown.show {
+    display: block;
+}
+
+/* Profile Dropdown */
+.profile-link {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 200px;
+}
+
+.profile-link.show {
+    display: block;
+}

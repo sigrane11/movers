@@ -33,7 +33,7 @@
             <li>
 				<a href="#"><i class='bx bx-cog icon' ></i> Asset Management <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="asset.php">Vehicles</a></li>
+                <li><a href="asset.php">Vehicles</a></li>
                     <li><a href="consumable.php">Consumable Asset</a></li>
                     <li><a href="consumable.php">Land properties</a></li>
 				</ul>
@@ -94,7 +94,8 @@
          </div>
          <br>
            <div class="container">
-            <h1>Asset Administration</h1>
+            <h1>Asset Adm
+                 inistration</h1>
             <div class="actions">
                     <button id="addAssetBtn">Add Asset</button>
                     <input type="text" id="searchInput" placeholder="Search Assets..." />
@@ -105,22 +106,25 @@
                         <option value="Rejected">Rejected </option>
                     </select>
                 </div>
-                <table id="assetTable" style="width: 5px;">
+                <table id="assetTable" style="width: 100%;">
     <thead>
         <tr>
-            <th>Vehicle ID</th>
-            <th>Plate Number</th>
-            <th>Brand</th>
-            <th>Model</th>
-            <th>Year</th>
-            <th>Depreciation Value</th>
-            <th>VIN</th>
-            <th>Condition</th>
-            <th>Actions</th>
+            <th>Category</th>
+            <th>Unit of Measure	</th>
+            <th>Quantity in Stock</th>
+            <th>Reorder Level</th>
+            <th>Supplier</th>
+            <th>Purchase Price</th>
+            <th>Last Purchase Date</th>
+            <th>Expiration Date</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Remarks</th>
         </tr>
     </thead>
     <tbody id="assetTableBody"></tbody>
 </table>
+
             <div id="assetForm" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
