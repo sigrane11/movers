@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	<link rel="stylesheet" href="style.css">
-    <link rel="tracking.js" href="tracking.js">
-	<link rel="stylesheet" href="asset.css">
-	<title>GPS Tracking</title>
-	<script src="/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="asset.css">
+    <title>Assets</title>
 </head>
 <body>
-	
-	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<div class="brand">
-			<a href="admindashboard.php"><img src="mover.jpg"></a>
-		 </div>
-		<ul class="side-menu">
-			<li><a href="admindashboard.php" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
-			<li class="divider" data-text="main">Main</li>
-			<li>
-				<a href="#"><i class='bx bxs-package icon' ></i> Shipping <i class='bx bx-chevron-right icon-right' ></i></a>
-				<ul class="side-dropdown">
-					<li><a href="bookdetails.html">Order Details</a></li>
+    <section id="sidebar">
+        <div class="brand">
+            <a href="admindashboard.php"><img src="mover.jpg" alt="Logo"></a>
+         </div> 
+        <ul class="side-menu">
+            <li><a href="admindashboard.php" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
+            <li class="divider" data-text="main">Main</li>
+            <li>
+                <a href="#"><i class='bx bxs-package icon' ></i> Shipping <i class='bx bx-chevron-right icon-right' ></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="bookdetails.html">Order Details</a></li>
 					<li><a href="routes.html">Routes Selection</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="#"><i class='bx bx-current-location icon' ></i> Tracking <i class='bx bx-chevron-right icon-right' ></i></a>
-				<ul class="side-dropdown">
-					<li><a href="tracking.html">GPS Tracking</a></li>
-				</ul>
-			</li>
-			<li>
+                </ul>
+            </li>          
+            <li>
+                <a href="#"><i class='bx bx-current-location icon' ></i> Tracking <i class='bx bx-chevron-right icon-right' ></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="tracking.html">GPS Tracking</a></li>                  
+                </ul>
+            </li>
+            <li>
 				<a href="#"><i class='bx bx-cog icon' ></i> Asset Management <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="asset.php">Asset Dashboard</a></li>
+					<li><a href="vehicles.php">Vehicles</a></li>
+                    <li><a href="consumable.php">Consumable Asset</a></li>
+                    <li><a href="lands.php">Land properties</a></li>
 				</ul>
 			</li>
         </ul>
     </section>
-	<!-- SIDEBAR -->
 
-		<!-- NAVBAR -->
-
-	    <section id="content">
+    <!-- CONTENT -->
+    <section id="content">
         <nav>
             <i class='bx bx-home toggle-sidebar'></i>
              <form action="#">
@@ -358,4 +354,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+</body>
 </html>

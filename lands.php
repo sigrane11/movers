@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	<link rel="stylesheet" href="style.css">
-    <link rel="tracking.js" href="tracking.js">
-	<link rel="stylesheet" href="asset.css">
-	<title>GPS Tracking</title>
-	<script src="/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="asset.css">
+    <title>Assets</title>
 </head>
 <body>
-	
-	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<div class="brand">
-			<a href="admindashboard.php"><img src="mover.jpg"></a>
-		 </div>
-		<ul class="side-menu">
-			<li><a href="admindashboard.php" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
-			<li class="divider" data-text="main">Main</li>
-			<li>
-				<a href="#"><i class='bx bxs-package icon' ></i> Shipping <i class='bx bx-chevron-right icon-right' ></i></a>
-				<ul class="side-dropdown">
-					<li><a href="bookdetails.html">Order Details</a></li>
+    <section id="sidebar">
+        <div class="brand">
+            <a href="admindashboard.php"><img src="mover.jpg" alt="Logo"></a>
+         </div> 
+        <ul class="side-menu">
+            <li><a href="admindashboard.php" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
+            <li class="divider" data-text="main">Main</li>
+            <li>
+                <a href="#"><i class='bx bxs-package icon' ></i> Shipping <i class='bx bx-chevron-right icon-right' ></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="bookdetails.html">Order Details</a></li>
 					<li><a href="routes.html">Routes Selection</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="#"><i class='bx bx-current-location icon' ></i> Tracking <i class='bx bx-chevron-right icon-right' ></i></a>
-				<ul class="side-dropdown">
-					<li><a href="tracking.html">GPS Tracking</a></li>
-				</ul>
-			</li>
-			<li>
+                </ul>
+            </li>          
+            <li>
+                <a href="#"><i class='bx bx-current-location icon' ></i> Tracking <i class='bx bx-chevron-right icon-right' ></i></a>
+                <ul class="side-dropdown">
+                    <li><a href="tracking.html">GPS Tracking</a></li>                  
+                </ul>
+            </li>
+            <li>
 				<a href="#"><i class='bx bx-cog icon' ></i> Asset Management <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="asset.php">Asset Dashboard</a></li>
+                <li><a href="vehicles.php">Vehicles</a></li>
+                    <li><a href="consumable.php">Consumable Asset</a></li>
+                    <li><a href="lands.php">Land properties</a></li>
 				</ul>
 			</li>
         </ul>
     </section>
-	<!-- SIDEBAR -->
 
-		<!-- NAVBAR -->
-
-	    <section id="content">
+    <!-- CONTENT -->
+    <section id="content">
         <nav>
             <i class='bx bx-home toggle-sidebar'></i>
              <form action="#">
@@ -86,13 +82,14 @@
             <ul class="breadcrumbs">
                 <li><a href="admindashboard.php">Home</a></li>
                 <li class="divider">/</li>
-                <li><a href="asset.php" class="active">Asset Dashboard</a></li>
+                <li><a href="asset.php" class="active">Land properties</a></li>
             </ul>
 			<br>
          <br>     
          <br>
            <div class="container">
-            <h1>Asset Administration</h1>
+            <h1>Asset Adm
+                 inistration</h1>
             <div class="actions">
                     <button id="addAssetBtn">Add Asset</button>
                     <input type="text" id="searchInput" placeholder="Search Assets..." />
@@ -103,22 +100,95 @@
                         <option value="Rejected">Rejected </option>
                     </select>
                 </div>
-                <table id="assetTable" style="width: 5px;">
-    <thead>
-        <tr>
-            <th>Vehicle ID</th>
-            <th>Plate Number</th>
-            <th>Brand</th>
-            <th>Model</th>
-            <th>Year</th>
-            <th>Depreciation Value</th>
-            <th>VIN</th>
-            <th>Condition</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody id="assetTableBody"></tbody>
+                <table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Property ID</th>
+      <th>Owner Name</th>
+      <th>Location</th>
+      <th>Area (sq.m)</th>
+      <th>Land Type</th>
+      <th>Status</th>
+      <th>Acquisition Date</th>
+      <th>Value (₱)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LP-001</td>
+      <td>Juan Dela Cruz</td>
+      <td>Brgy. Mabini, Batangas</td>
+      <td>500</td>
+      <td>Agricultural</td>
+      <td>Owned</td>
+      <td>2020-03-15</td>
+      <td>1,200,000</td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>LP-002</td>
+      <td>Maria Santos</td>
+      <td>Cabuyao, Laguna</td>
+      <td>1,200</td>
+      <td>Warehouse</td>
+      <td>Leased</td>
+      <td>2022-08-01</td>
+      <td>4,500,000</td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>LP-003</td>
+      <td>Global Logistics Inc.</td>
+      <td>Clark Freeport Zone, Pampanga</td>
+      <td>2,000</td>
+      <td>Warehouse</td>
+      <td>Owned</td>
+      <td>2019-11-20</td>
+      <td>10,000,000</td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>LP-004</td>
+      <td>Mark Rivera</td>
+      <td>Bonifacio Global City, Taguig</td>
+      <td>800</td>
+      <td>Office</td>
+      <td>Owned</td>
+      <td>2021-05-12</td>
+      <td>18,500,000</td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>LP-005</td>
+      <td>NextGen Solutions</td>
+      <td>Ortigas Center, Pasig</td>
+      <td>650</td>
+      <td>Office</td>
+      <td>Leased</td>
+      <td>2023-01-10</td>
+      <td>9,800,000</td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
 </table>
+
+
             <div id="assetForm" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -358,4 +428,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+</body>
 </html>

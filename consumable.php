@@ -33,9 +33,9 @@
             <li>
 				<a href="#"><i class='bx bx-cog icon' ></i> Asset Management <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-                <li><a href="asset.php">Vehicles</a></li>
+					<li><a href="vehicles.php">Vehicles</a></li>
                     <li><a href="consumable.php">Consumable Asset</a></li>
-                    <li><a href="consumable.php">Land properties</a></li>
+                    <li><a href="lands.php">Land properties</a></li>
 				</ul>
 			</li>
         </ul>
@@ -86,16 +86,9 @@
             </ul>
 			<br>
          <br>     
-         <div class="categories">
-        <button onclick="window.location.href='cat1.html'">Cat 4</button>
-        <button onclick="window.location.href='cat2.html'">Cat 3</button>
-        <button onclick="window.location.href='cat3.html'">Cat 2</button>
-        <button onclick="window.location.href='cat4.html'">Cat 1</button>
-         </div>
          <br>
            <div class="container">
-            <h1>Asset Adm
-                 inistration</h1>
+            <h1>Asset Administration</h1>
             <div class="actions">
                     <button id="addAssetBtn">Add Asset</button>
                     <input type="text" id="searchInput" placeholder="Search Assets..." />
@@ -106,25 +99,156 @@
                         <option value="Rejected">Rejected </option>
                     </select>
                 </div>
-                <table id="assetTable" style="width: 100%;">
+        
+                <table>
     <thead>
-        <tr>
-            <th>Category</th>
-            <th>Unit of Measure	</th>
-            <th>Quantity in Stock</th>
-            <th>Reorder Level</th>
-            <th>Supplier</th>
-            <th>Purchase Price</th>
-            <th>Last Purchase Date</th>
-            <th>Expiration Date</th>
-            <th>Location</th>
-            <th>Status</th>
-            <th>Remarks</th>
-        </tr>
+      <tr>
+        <th>Asset Type</th>
+        <th>Description</th>
+        <th>Examples</th>
+        <th>Lifespan</th>
+        <th>Replenishment Frequency</th>
+        <th>Estimated Cost</th>
+        <th>Usage Impact</th>
+        <th>Stock Capacity</th>
+        <th>Current Stock</th>
+        <th>Reorder Point</th>
+        <th>Storage Requirements</th>
+      </tr>
     </thead>
-    <tbody id="assetTableBody"></tbody>
-</table>
-
+    <tbody>
+      <tr>
+        <td>Engine Oil</td>
+        <td>Lubricates engine parts to reduce wear</td>
+        <td>Shell Helix, Caltex Delo</td>
+        <td>6 months</td>
+        <td>Monthly</td>
+        <td>₱2,500 per drum</td>
+        <td>High impact on vehicle health</td>
+        <td>50 drums</td>
+        <td>20 drums</td>
+        <td>15 drums</td>
+        <td>Cool, dry area</td>
+      </tr>
+      <tr>
+        <td>Tires</td>
+        <td>Essential for vehicle mobility</td>
+        <td>Goodyear, Bridgestone</td>
+        <td>3 years</td>
+        <td>Quarterly</td>
+        <td>₱6,000 each</td>
+        <td>Critical for safety</td>
+        <td>100 units</td>
+        <td>35 units</td>
+        <td>20 units</td>
+        <td>Clean, dry rack</td>
+      </tr>
+      <tr class="low-stock">
+        <td>GPS Trackers</td>
+        <td>Track vehicle location and movement</td>
+        <td>Trackimo, Coban</td>
+        <td>5 years</td>
+        <td>Yearly</td>
+        <td>₱3,500 each</td>
+        <td>High for tracking/logistics</td>
+        <td>40 units</td>
+        <td>10 units</td>
+        <td>15 units</td>
+        <td>Secure storage room</td>
+      </tr>
+      <tr>
+        <td>Batteries</td>
+        <td>Provide power to start vehicles</td>
+        <td>Motolite, Panasonic</td>
+        <td>2 years</td>
+        <td>Bi-annually</td>
+        <td>₱4,000 each</td>
+        <td>High – affects startup</td>
+        <td>60 units</td>
+        <td>25 units</td>
+        <td>15 units</td>
+        <td>Ventilated indoor space</td>
+      </tr>
+      <tr>
+        <td>Fuel Cards</td>
+        <td>Used to purchase fuel for fleet</td>
+        <td>Petron Fleet Card, Shell Card</td>
+        <td>1 year</td>
+        <td>Monthly</td>
+        <td>₱5,000 per card</td>
+        <td>Medium</td>
+        <td>200 cards</td>
+        <td>150 cards</td>
+        <td>100 cards</td>
+        <td>Locked drawer/cabinet</td>
+      </tr>
+      <tr class="low-stock">
+        <td>Brake Pads</td>
+        <td>Enables safe vehicle braking</td>
+        <td>Bosch, Bendix</td>
+        <td>1 year</td>
+        <td>Quarterly</td>
+        <td>₱1,200 per set</td>
+        <td>High – safety related</td>
+        <td>80 sets</td>
+        <td>30 sets</td>
+        <td>30 sets</td>
+        <td>Shelving, moderate space</td>
+      </tr>
+      <tr>
+        <td>Air Filters</td>
+        <td>Filters contaminants from air intake</td>
+        <td>Bosch, Sakura</td>
+        <td>1 year</td>
+        <td>Quarterly</td>
+        <td>₱800 each</td>
+        <td>Medium impact</td>
+        <td>70 units</td>
+        <td>28 units</td>
+        <td>15 units</td>
+        <td>Enclosed, dust-free cabinet</td>
+      </tr>
+      <tr>
+        <td>First Aid Kits</td>
+        <td>For emergency medical response in vehicles</td>
+        <td>Generic kits with meds and tools</td>
+        <td>2 years</td>
+        <td>Annually</td>
+        <td>₱600 each</td>
+        <td>Low, but required by law</td>
+        <td>100 kits</td>
+        <td>80 kits</td>
+        <td>50 kits</td>
+        <td>Dry cabinet, labeled</td>
+      </tr>
+      <tr>
+        <td>Fire Extinguishers</td>
+        <td>Safety equipment for fire emergencies</td>
+        <td>ABC-type, 5-lb extinguishers</td>
+        <td>5 years</td>
+        <td>Every 3 years</td>
+        <td>₱1,800 each</td>
+        <td>Safety-critical</td>
+        <td>50 units</td>
+        <td>40 units</td>
+        <td>25 units</td>
+        <td>Upright, cool & dry space</td>
+      </tr>
+      <tr>
+        <td>Uniforms</td>
+        <td>Apparel for logistics personnel</td>
+        <td>Polo shirts, pants, vests</td>
+        <td>1 year</td>
+        <td>Bi-annually</td>
+        <td>₱700 per set</td>
+        <td>Low – professional image</td>
+        <td>200 sets</td>
+        <td>120 sets</td>
+        <td>80 sets</td>
+        <td>Clothing racks, sealed bags</td>
+      </tr>
+    </tbody>
+  </table>
             <div id="assetForm" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
